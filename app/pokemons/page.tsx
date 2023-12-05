@@ -4,9 +4,10 @@ import Header from "@/components/header/page";
 import styles from "./page.module.css";
 import Footer from "@/components/footer/page";
 import { useEffect, useState } from "react";
+import { Pokemons } from "@/types/pokemons";
 
 export default function Pokemons() {
-  const [cards, setCards] = useState([]);
+  const [cards, setCards] = useState<Pokemons[]>([]);
   const [loading, setLoading] = useState(true);
 
   const fetchCards = async () => {
@@ -34,7 +35,7 @@ export default function Pokemons() {
           <p>Loading...</p>
         ) : (
           cards.map((card) => (
-            <div key={card.id}>
+            <div key={card.pokedexId}>
               <h2>{card.name.fr}</h2>
             </div>
           ))
