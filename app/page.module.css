@@ -1,0 +1,48 @@
+.main {
+  height: 40rem;
+  width: 90%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  background-color: #dedede;
+  border-radius: 10px;
+
+  margin: 4rem auto;
+  padding: 1rem;
+}
+
+.title,
+.intro,
+.link {
+  margin: 0;
+
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.intro {
+  font-size: 1.5rem;
+}
+
+.link {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #000;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.borderLeft,
+.borderRight {
+  height: 100%;
+  width: auto;
+
+  border-radius: 10px;
+}

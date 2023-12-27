@@ -4,10 +4,10 @@ import Header from "@/components/header/page";
 import styles from "./page.module.css";
 import Footer from "@/components/footer/page";
 import { useEffect, useState } from "react";
-import { Pokemons } from "@/types/pokemons";
+import { Pokemon } from "@/types/pokemon";
 
 export default function Pokemons() {
-  const [cards, setCards] = useState<Pokemons[]>([]);
+  const [cards, setCards] = useState<Pokemon[]>([]);
   const [loading, setLoading] = useState(true);
 
   const fetchCards = async () => {
