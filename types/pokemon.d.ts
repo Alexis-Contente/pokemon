@@ -12,4 +12,29 @@ export type Pokemon = {
     regular: string;
     shiny: string;
   };
+  types: {
+    name: string;
+    image: string;
+  };
+  talents: {
+    name: string;
+    tc: boolean;
+  };
+  stats: {
+    hp: number;
+    atk: number;
+    def: number;
+    spe_atk: number;
+    spe_def: number;
+    vit: number;
+  };
+  resistances: {
+    name: string;
+    multiplier: number;
+  };
+  egg_groups: string[];
+  sexe: {
+    male: number;
+    female: number;
+  };
 };

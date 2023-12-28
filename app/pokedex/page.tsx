@@ -36,7 +36,11 @@ export default function Pokedex() {
           <p>Loading...</p>
         ) : (
           cards.map((card) => (
-            <Link key={card.pokedexId} className={styles.card} href={""}>
+            <Link
+              key={card.pokedexId}
+              className={styles.card}
+              href={`/pokemon/${card.pokedexId}`}
+            >
               <div className={styles.header_card}>
                 <h2 className={styles.name}>{card.name.fr}</h2>
                 <p className={styles.generation}>G{card.generation}</p>
