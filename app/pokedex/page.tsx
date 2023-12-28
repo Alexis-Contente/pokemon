@@ -5,8 +5,10 @@ import styles from "./page.module.css";
 import Footer from "@/components/footer/page";
 import { useEffect, useState } from "react";
 import { Pokemon } from "@/types/pokemon";
+import Image from "next/image";
+import Link from "next/link";
 
-export default function Pokemons() {
+export default function Pokedex() {
   const [cards, setCards] = useState<Pokemon[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -30,14 +32,23 @@ export default function Pokemons() {
     <>
       <Header />
       <main className={styles.main}>
-        <h1>Pokémons</h1>
         {loading ? (
           <p>Loading...</p>
         ) : (
           cards.map((card) => (
-            <div key={card.pokedexId}>
-              <h2>{card.name.fr}</h2>
-            </div>
+            <Link key={card.pokedexId} className={styles.card} href={""}>
+              <div className={styles.header_card}>
+                <h2 className={styles.name}>{card.name.fr}</h2>
+                <p className={styles.generation}>G{card.generation}</p>
+              </div>
+              <Image
+                className={styles.image}
+                src={card.sprites.regular}
+                alt={card.name.fr}
+                width={200}
+                height={200}
+              />
+            </Link>
           ))
         )}
       </main>

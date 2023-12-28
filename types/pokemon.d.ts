@@ -7,4 +7,9 @@ export type Pokemon = {
   category: string;
   height: string;
   weight: string;
+  sprites: {
+    gmax: string;
+    regular: string;
+    shiny: string;
+  };
 };
