@@ -1,0 +1,68 @@
+.container {
+  width: 90%;
+  height: 40rem;
+
+  margin: 4rem auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  background-color: #dedede;
+  border-radius: 10px;
+}
+
+.header {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.name {
+  font-size: 3rem;
+}
+
+.boxes {
+  width: auto;
+  height: auto;
+  margin: 1rem;
+  background-color: #ccc;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.box_image {
+  width: 22%;
+  height: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.box_infos {
+  width: 22%;
+}
+
+.box_stats {
+  width: 22%;
+}
+
+.p_stats,
+.p_resistances {
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.box_resistances {
+  width: 22%;
+}

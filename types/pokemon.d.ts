@@ -1,3 +1,5 @@
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
+
 export type Pokemon = {
   pokedexId: string;
   name: {
@@ -12,14 +14,18 @@ export type Pokemon = {
     regular: string;
     shiny: string;
   };
-  types: {
-    name: string;
-    image: string;
-  };
-  talents: {
-    name: string;
-    tc: boolean;
-  };
+  types: [
+    {
+      name: string;
+      image: string;
+    }
+  ];
+  talents: [
+    {
+      name: string;
+      tc: boolean;
+    }
+  ];
   stats: {
     hp: number;
     atk: number;
@@ -28,10 +34,12 @@ export type Pokemon = {
     spe_def: number;
     vit: number;
   };
-  resistances: {
-    name: string;
-    multiplier: number;
-  };
+  resistances: [
+    {
+      name: string;
+      multiplier: number;
+    }
+  ];
   egg_groups: string[];
   sexe: {
     male: number;
