@@ -3,6 +3,7 @@
 import styles from "./page.module.css";
 import Footer from "@/components/footer/page";
 import Header from "@/components/header/page";
+import Loader from "@/components/loader/loader";
 import { Pokemon } from "@/types/pokemon";
 import { link } from "fs";
 import Image from "next/image";
@@ -42,7 +43,7 @@ export default function Pokemon({
     <>
       <Header />
       {loading ? (
-        <p>Loading...</p>
+        <Loader />
       ) : (
         <div className={styles.container}>
           <div className={styles.header}>

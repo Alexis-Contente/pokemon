@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { Pokemon } from "@/types/pokemon";
 import Image from "next/image";
 import Link from "next/link";
+import Loader from "@/components/loader/loader";
 
 export default function Pokedex() {
   const [cards, setCards] = useState<Pokemon[]>([]);
@@ -33,7 +34,7 @@ export default function Pokedex() {
       <Header />
       <main className={styles.main}>
         {loading ? (
-          <p>Loading...</p>
+          <Loader />
         ) : (
           cards.slice(1).map((card) => (
             <Link
@@ -51,6 +52,7 @@ export default function Pokedex() {
                 alt={card.name.fr}
                 width={200}
                 height={200}
+                loading="lazy"
               />
             </Link>
           ))
