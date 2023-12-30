@@ -35,7 +35,7 @@ export default function Pokedex() {
         {loading ? (
           <p>Loading...</p>
         ) : (
-          cards.map((card) => (
+          cards.slice(1).map((card) => (
             <Link
               key={card.pokedexId}
               className={styles.card}
