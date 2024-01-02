@@ -1,7 +1,26 @@
 .main {
   width: 90%;
   margin: 4rem auto;
+}
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
 
+.btn {
+  margin-bottom: 2rem;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ccc;
+}
+
+.catalogue {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;

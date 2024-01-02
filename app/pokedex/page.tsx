@@ -1,26 +1,28 @@
 "use client";
 
-import Header from "@/components/header/page";
-import styles from "./page.module.css";
-import Footer from "@/components/footer/page";
 import { useEffect, useState } from "react";
-import { Pokemon } from "@/types/pokemon";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
+import Header from "@/components/header/page";
+import Footer from "@/components/footer/page";
 import Loader from "@/components/loader/loader";
+import styles from "./page.module.css";
+import { Pokemon } from "@/types/pokemon";
 
 export default function Pokedex() {
   const [cards, setCards] = useState<Pokemon[]>([]);
   const [loading, setLoading] = useState(true);
+  const [selectedGeneration, setSelectedGeneration] = useState<number | null>(
+    null
+  );
 
   const fetchCards = async () => {
     try {
       const response = await fetch("https://tyradex.vercel.app/api/v1/pokemon");
       const data = await response.json();
-      console.log("Cards:", data);
       setCards(data);
     } catch (error) {
-      console.log("Error:", error);
+      console.error("Error:", error);
     } finally {
       setLoading(false);
     }
@@ -29,34 +31,63 @@ export default function Pokedex() {
   useEffect(() => {
     fetchCards();
   }, []);
+
+  const filterByGeneration = (generation: number | null) => {
+    setSelectedGeneration(generation);
+  };
+
   return (
     <>
       <Header />
       <main className={styles.main}>
-        {loading ? (
-          <Loader />
-        ) : (
-          cards.slice(1).map((card) => (
-            <Link
-              key={card.pokedexId}
-              className={styles.card}
-              href={`/pokemon/${card.pokedexId}`}
+        <div className={styles.buttons}>
+          <button
+            onClick={() => filterByGeneration(null)}
+            className={styles.btn}
+          >
+            Toutes générations
+          </button>
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((gen) => (
+            <button
+              key={gen}
+              onClick={() => filterByGeneration(gen)}
+              className={styles.btn}
             >
-              <div className={styles.header_card}>
-                <h2 className={styles.name}>{card.name.fr}</h2>
-                <p className={styles.generation}>G{card.generation}</p>
-              </div>
-              <Image
-                className={styles.image}
-                src={card.sprites.regular}
-                alt={card.name.fr}
-                width={200}
-                height={200}
-                loading="lazy"
-              />
-            </Link>
-          ))
-        )}
+              Génération {gen}
+            </button>
+          ))}
+        </div>
+        <div className={styles.catalogue}>
+          {loading ? (
+            <Loader />
+          ) : (
+            cards
+              .filter(
+                (card) =>
+                  selectedGeneration === null ||
+                  card.generation === selectedGeneration
+              )
+              .map((card) => (
+                <Link
+                  key={card.pokedexId}
+                  href={`/pokemon/${card.pokedexId}`}
+                  className={styles.card}
+                >
+                  <div className={styles.header_card}>
+                    <h2 className={styles.name}>{card.name.fr}</h2>
+                    <p className={styles.generation}>G{card.generation}</p>
+                  </div>
+                  <Image
+                    src={card.sprites.regular}
+                    alt={card.name.fr}
+                    width={200}
+                    height={200}
+                    loading="lazy"
+                  />
+                </Link>
+              ))
+          )}
+        </div>
       </main>
       <Footer />
     </>
