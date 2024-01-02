@@ -45,7 +45,7 @@ export default function Pokedex() {
             onClick={() => filterByGeneration(null)}
             className={styles.btn}
           >
-            Toutes générations
+            All
           </button>
           {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((gen) => (
             <button
@@ -53,7 +53,7 @@ export default function Pokedex() {
               onClick={() => filterByGeneration(gen)}
               className={styles.btn}
             >
-              Génération {gen}
+              Gen {gen}
             </button>
           ))}
         </div>

@@ -54,8 +54,8 @@ export default function Pokemon({
             <div className={styles.box_image}>
               <Image
                 className={styles.image}
-                src={pokemon?.sprites.regular}
-                alt={pokemon?.name.fr}
+                src={pokemon?.sprites.regular ?? "/"}
+                alt={pokemon?.name.fr ?? "Image par défaut"}
                 width={100}
                 height={200}
               />
