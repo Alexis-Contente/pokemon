@@ -1,5 +1,7 @@
+// Importation des modules
 import styles from "./page.module.css";
 
+// Composant Footer
 export default function Footer() {
   return (
     <footer className={styles.footer}>

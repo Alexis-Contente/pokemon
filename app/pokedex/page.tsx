@@ -1,5 +1,6 @@
 "use client";
 
+// Importation des modules
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,13 +10,16 @@ import Loader from "@/components/loader/loader";
 import styles from "./page.module.css";
 import { Pokemon } from "@/types/pokemon";
 
+// Composant Pokedex
 export default function Pokedex() {
+  // Déclaration des variables d'état
   const [cards, setCards] = useState<Pokemon[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedGeneration, setSelectedGeneration] = useState<number | null>(
     null
   );
 
+  // Requête pour récupérer les données de tous les Pokémons
   const fetchCards = async () => {
     try {
       const response = await fetch("https://tyradex.vercel.app/api/v1/pokemon");
@@ -32,6 +36,7 @@ export default function Pokedex() {
     fetchCards();
   }, []);
 
+  // Fonction pour filtrer les Pokémons par génération
   const filterByGeneration = (generation: number | null) => {
     setSelectedGeneration(generation);
   };

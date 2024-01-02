@@ -1,3 +1,4 @@
+// Importation des modules
 import Footer from "@/components/footer/page";
 import styles from "./page.module.css";
 import Header from "@/components/header/page";
@@ -6,6 +7,7 @@ import Image from "next/image";
 import BorderLeft from "../public/assets/images/border-left.jpg";
 import BorderRight from "../public/assets/images/border-right.jpg";
 
+// Composant Home
 export default function Home() {
   return (
     <>

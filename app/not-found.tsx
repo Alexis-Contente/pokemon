@@ -1,5 +1,7 @@
+// Importation des modules
 import styles from "./page.module.css";
 
+// Composant NotFound
 export default function NotFound() {
   return (
     <div className={styles.notfound}>

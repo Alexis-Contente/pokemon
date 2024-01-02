@@ -1,5 +1,6 @@
 "use client";
 
+// Importation des modules
 import styles from "./page.module.css";
 import Footer from "@/components/footer/page";
 import Header from "@/components/header/page";
@@ -8,6 +9,7 @@ import { Pokemon } from "@/types/pokemon";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
+// Composant Pokemon
 export default function Pokemon({
   params,
 }: {
@@ -15,9 +17,11 @@ export default function Pokemon({
     id: string;
   };
 }) {
+  // Déclaration des variables d'état
   const [pokemon, setPokemon] = useState<Pokemon>();
   const [loading, setLoading] = useState(true);
 
+  // Requête pour récupérer les données d'un Pokémon en fonction de son id
   const fetchPokemon = async () => {
     try {
       const response = await fetch(
@@ -33,6 +37,7 @@ export default function Pokemon({
     }
   };
 
+  // Utilisation de useEffect pour exécuter la requête au chargement de la page
   useEffect(() => {
     fetchPokemon();
   }, []);
