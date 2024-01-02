@@ -62,16 +62,20 @@
   background-color: #000;
   width: 100%;
   min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .title404,
 .p404 {
   margin: 0;
+  width: 50%;
 }
 
 .title404 {
   font-size: 10rem;
   color: #eefa00;
+  text-align: right;
 }
 
 .p404 {
