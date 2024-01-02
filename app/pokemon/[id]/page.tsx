@@ -5,7 +5,6 @@ import Footer from "@/components/footer/page";
 import Header from "@/components/header/page";
 import Loader from "@/components/loader/loader";
 import { Pokemon } from "@/types/pokemon";
-import { link } from "fs";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -19,7 +18,6 @@ export default function Pokemon({
   const [pokemon, setPokemon] = useState<Pokemon>();
   const [loading, setLoading] = useState(true);
 
-  // Fetch the pokemon with the id params.id
   const fetchPokemon = async () => {
     try {
       const response = await fetch(

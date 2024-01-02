@@ -17,13 +17,13 @@ export default function Home() {
           className={styles.borderLeft}
         />
         <div className={styles.container}>
-          <h1 className={styles.title}>Bienvenue !</h1>
+          <h1 className={styles.title}>Bienvenue</h1>
           <p className={styles.intro}>
             Retrouvez tous les Pokémons de l&apos;emblématique dessin animé,
             ainsi que toutes les infos liées à ces Pokémons !
           </p>
           <Link href="/pokedex" className={styles.link}>
-            &gt; Tous les Pokémons &lt;
+            <button className={styles.btn}>Pokedex</button>
           </Link>
         </div>
         <Image
