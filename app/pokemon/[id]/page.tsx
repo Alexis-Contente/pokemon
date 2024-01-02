@@ -68,13 +68,16 @@ export default function Pokemon({
               <p>Taille: {pokemon?.height}</p>
               <p>Poid: {pokemon?.weight}</p>
               <p>
-                Sexe: Mâle {pokemon?.sexe.male} | Femelle {pokemon?.sexe.female}
+                Sexe: Mâle {pokemon?.sexe?.male ?? "NC"} | Femelle{" "}
+                {pokemon?.sexe?.female ?? "NC"}
               </p>
               <p>
                 Compatibilité:{" "}
-                {pokemon?.egg_groups.map((egg_group, index) => (
-                  <li key={index}>{`${egg_group}`}</li>
-                ))}
+                {pokemon?.egg_groups && pokemon.egg_groups.length > 0
+                  ? pokemon.egg_groups.map((egg_group, index) => (
+                      <li key={index}>{egg_group}</li>
+                    ))
+                  : "NC"}
               </p>
               <p>
                 Talents:{" "}

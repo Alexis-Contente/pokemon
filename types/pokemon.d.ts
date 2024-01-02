@@ -44,5 +44,5 @@ export type Pokemon = {
   sexe: {
     male: number;
     female: number;
-  };
+  } | null;
 };
