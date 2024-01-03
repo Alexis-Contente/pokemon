@@ -1,10 +1,10 @@
-# Pokédex app
+# 🔴⚪️ Pokédex app
 
-## Description
+## 📍 Description
 
 Welcome to the repository of our Pokédex application! This modern and interactive web application, developed using the latest version of Next.js and TypeScript, offers an immersive experience to Pokémon enthusiasts. Our digital Pokédex compiles all known Pokémon, allowing users to discover and explore the vast world of Pokémon in detail.
 
-## Features
+## ⚡️ Features
 
 **Complete Pokémon List**: Access a comprehensive list of Pokémon, each presented with its image, name, and basic characteristics.
 
@@ -12,20 +12,38 @@ Welcome to the repository of our Pokédex application! This modern and interacti
 
 **Intuitive Interface**: The application utilizes the latest Next.js features for smooth and responsive navigation.
 
-## Tech Stack
+## 🛠 Tech Stack
 
 **Next.js**: Using the latest version of Next.js for efficient server-side rendering and an optimal user experience.
 
 **TypeScript**: TypeScript provides a solid and maintainable codebase, enhancing the quality and robustness of the application.
 
-## Installation and Usage
+## 🚀 Installation and Usage
 
 To install and use this Pokédex application, follow the instructions below:
 
-Clone the repository to your local machine.
+Clone the project
 
-Install dependencies by running `npm install` or `yarn install`.
+```bash
+  git clone git@github.com:Alexis-Contente/alexis-quantcube-technical-interview.git
+```
 
-Start the application with `npm run dev` or `yarn dev`.
+Go to the project directory
+
+```bash
+  cd "project-clone"
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
 
 Open your browser and go to localhost:3000 to start exploring the Pokémon universe.
