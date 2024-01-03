@@ -25,7 +25,7 @@ To install and use this Pokédex application, follow the instructions below:
 Clone the project
 
 ```bash
-  git clone git@github.com:Alexis-Contente/alexis-quantcube-technical-interview.git
+  git clone git@github.com:Alexis-Contente/pokemon.git
 ```
 
 Go to the project directory
