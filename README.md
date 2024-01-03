@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Pokédex app
 
-## Getting Started
+## Description
 
-First, run the development server:
+Welcome to the repository of our Pokédex application! This modern and interactive web application, developed using the latest version of Next.js and TypeScript, offers an immersive experience to Pokémon enthusiasts. Our digital Pokédex compiles all known Pokémon, allowing users to discover and explore the vast world of Pokémon in detail.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Complete Pokémon List**: Access a comprehensive list of Pokémon, each presented with its image, name, and basic characteristics.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Pokémon Details**: By clicking on a Pokémon, users can view detailed information such as type, stats, evolutions, and more.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+**Intuitive Interface**: The application utilizes the latest Next.js features for smooth and responsive navigation.
 
-## Learn More
+## Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+**Next.js**: Using the latest version of Next.js for efficient server-side rendering and an optimal user experience.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**TypeScript**: TypeScript provides a solid and maintainable codebase, enhancing the quality and robustness of the application.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Installation and Usage
 
-## Deploy on Vercel
+To install and use this Pokédex application, follow the instructions below:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Clone the repository to your local machine.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Install dependencies by running `npm install` or `yarn install`.
+
+Start the application with `npm run dev` or `yarn dev`.
+
+Open your browser and go to localhost:3000 to start exploring the Pokémon universe.
